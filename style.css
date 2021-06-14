@@ -1,0 +1,384 @@
+/* Used to encapsulate newspaper name, food and tv section into managable grid */
+/* gray and white colour scheme used to refelct broadsheet newspaper akin to the telegraph*/
+
+.titlebox {
+    display: grid;
+    padding: 20px 20px;
+    margin: 10px 10px;
+    column-gap: 10px;
+    row-gap: 10px;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+    color: black;
+    background-color: whitesmoke;
+    grid-template-areas:
+    "title food tv"
+    "title food tv";
+}
+
+
+.food {
+    grid-area: food;
+    font-family: 'Roboto', sans-serif;
+    border-left: 2px solid gray;
+    border-right: 2px solid gray;
+    padding: 10px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+ /* used to select font colour of paragraphs within class food only */
+.food p {
+        color: black;
+}
+
+.tv {
+    grid-area: tv;
+    font-family: 'Roboto', sans-serif;
+    border-right: 2px solid gray;
+    padding: 10px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+ /* used to select font colour of paragraphs within class tv only */
+
+.tv p {
+    color: black;
+}
+
+
+.title {
+    font-family: 'Diplomata SC', cursive;
+    font-size: 30px;
+    grid-area: title;
+    color: black;
+    padding: 0 10px 0 10px;
+    margin: 10px 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.title a:link {
+    color: black;
+    text-decoration: none;
+    
+}
+/*implemented to highlight link has been used*/
+.title a:visited {
+    color: black;
+    text-decoration: none;
+    
+}
+
+/* Add a whitesmoke background color to the top navigation */
+.topnav {
+    background-color: whitesmoke;
+    overflow: hidden;
+    margin: 10px;
+    top: 0;
+    height: auto;
+    align-self: start;
+}
+
+.topnav a:link {
+    color: black;
+    text-decoration: none;
+    
+}
+
+  /* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 40px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+ /* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+  
+/* Add an active class to highlight the current page */
+  .topnav a.active {
+    background-color:#FFDF6C;
+    color: #202020;
+  }
+  
+
+  /*responsive functionality, change nav to top down on smaller screen*/ 
+@media screen and (max-width: 500px) {
+    .topnav a {
+        width: 100%;
+   
+    }
+    .topnav {
+       justify-items: center;
+    }
+    .food {
+        display: none;
+    }
+    .title {
+        text-align: center;
+    }
+    .tv {
+        display: none;
+    }
+}
+/* breadcrumb styling section */
+
+ol.breadcrumb {
+    margin: 10px;
+    padding: 10px 16px;
+    list-style: none;
+    background-color: whitesmoke;
+  }
+
+ol.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+  }  
+
+ol.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: ">\00a0";
+  }
+
+ol.breadcrumb li a {
+    color: gray;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+ol.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+  }
+
+/*headline section styling - margin 10px across page elements */
+.headline {
+    padding: 5% 2%;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    font-family: 'Roboto', sans-serif;
+    font-style: bold 700;
+}
+
+/*contains .rona image */
+img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+/*fixed height and width of image */
+.rona {
+    height: 300px;
+    width: 300px;
+}
+
+.headlinetext {
+    padding: 5%;
+    margin-left: 5%;
+    font-family: 'Noticia Text', sans-serif;
+
+}
+
+/* container using css grid to layout various articles*/
+.container1 {
+    display: grid;
+    overflow: hidden;
+    font-family: 'Noticia Text', sans-serif;
+    height: 100%;
+    padding: 10px;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 2fr)) ;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+    grid-template-areas: 
+    "box1 box1 box2"
+    "box3 box4 box5"
+}
+
+/*break in page to reflect different section */
+.business {
+    margin: 10px;
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+}
+
+/*second container used to display change in layout */
+.container2 {
+    display: grid;
+    overflow: hidden;
+    font-family: 'Noticia Text', sans-serif;
+    height: 100%;
+    padding: 10px;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 2fr)) ;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+    grid-template-areas: 
+    "box1 box1 box2"
+    "box3 box4 box4"
+}
+
+
+/*img within box 1 */
+.box1 img {
+    max-width: 75%;
+    max-height: 75%;
+}
+
+/*align text within box1 */
+.box1 p {
+    align-self: center;
+    
+}
+
+/* use of flex-box to create responsive box */
+.box1 {
+    padding: 2%;
+    background: whitesmoke;
+    grid-area: box1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+    
+}
+
+/*image custom parameters*/
+#Sunak {
+    max-height: 100%;
+    max-width: auto;
+}
+
+#bold {
+    font-weight: 900;
+    font-size: large;
+}
+
+.box2 {
+    grid-area: box2;
+    padding: 2%;
+    background: whitesmoke;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.box3 {
+    grid-area: box3;
+    padding: 2%;
+    background: whitesmoke;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+.box4 {
+    grid-area: box4;
+    padding: 2%;
+    background: whitesmoke;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+/*img within box 4 container2 */
+.container2 .box4 img {
+    max-width: 75%;
+    max-height: 75%;
+}
+
+/*align text within box4 */
+.box4 p {
+    align-self: center;
+}
+
+.box5 {
+    grid-area: box5;
+    padding: 2%;
+    background: whitesmoke;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+/* input form styling including background image */
+.form {
+    background-color: rgb(179, 177, 177);
+    border-bottom: 2px solid gray;
+    margin: 10px;
+    height: 100%;
+    padding: 5px;
+    background-size: auto;
+    background-repeat: repeat;
+    background-image: url(https://prd-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/styles/atom_page_medium/public/thumbnails/image/banner_mapsHD.png);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+/* create indent for text and input from edge of background image */
+.form form {
+    margin: 5%;
+}
+
+/* encompass like and share button in grid format */
+.buttonbox {
+    display: grid;
+    grid-template-areas: 
+    "button button";
+    margin: 10px;
+    justify-content: center;
+    grid-gap: 50px;
+    background-color: whitesmoke;
+    padding: 2%;
+}
+
+/* button styling for like and share */
+
+.myButton {
+	box-shadow:inset 0px 0px 15px 3px #23395e;
+	background:linear-gradient(to bottom, #2e466e 5%, #415989 100%);
+	background-color:#2e466e;
+	border-radius:17px;
+	border:1px solid #1f2f47;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	padding:6px 13px;
+	text-decoration:none;
+    text-shadow:0px 1px 0px #263666;
+    grid-area: "button";
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #5474b4 5%, #2e466e 100%);
+	background-color:#415989;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}

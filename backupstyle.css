@@ -1,0 +1,299 @@
+.titlebox {
+    display: grid;
+    padding: 20px 20px;
+    margin: 10px 10px;
+    column-gap: 10px;
+    row-gap: 10px;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+    color: black;
+    background-color: whitesmoke;
+    grid-template-areas:
+    "title food tv"
+    "title food tv";
+}
+
+
+.food {
+    grid-area: food;
+    font-family: 'Roboto', sans-serif;
+    border-left: 2px solid gray;
+    border-right: 2px solid gray;
+    padding: 10px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.food p {
+    color:darkgray;
+}
+
+.tv {
+    grid-area: tv;
+    font-family: 'Roboto', sans-serif;
+    border-right: 2px solid gray;
+    padding: 10px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tv p {
+    color: darkgrey;
+}
+
+
+.title {
+    font-family: 'Diplomata SC', cursive;
+    font-size: 30px;
+    grid-area: title;
+    color: black;
+    padding: 0 10px 0 10px;
+    margin: 10px 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.title a:link {
+    color: black;
+    text-decoration: none;
+    
+}
+
+.title a:visited {
+    color: blue;
+    text-decoration: none;
+    
+}
+
+.topnav {
+    background-color: whitesmoke;
+    overflow: hidden;
+    margin: 10px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    height: auto;
+    align-self: start;
+}
+
+.topnav a:link {
+    color: black;
+    text-decoration: none;
+    
+}
+
+
+.topnav a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 14px 40px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+    position: -webkit-sticky;
+    position: sticky;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: whitesmoke;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 40px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add an active class to highlight the current page */
+  .topnav a.active {
+    background-color:#FFDF6C;
+    color: #202020;
+  }
+  
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav .icon {
+    display: none;
+  }
+
+  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+
+
+
+ol.breadcrumb {
+    margin: 10px;
+    padding: 10px 16px;
+    list-style: none;
+    background-color: whitesmoke;
+  }
+
+ol.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+  }  
+
+ol.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: ">\00a0";
+  }
+
+ol.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+  }
+  
+ol.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+  }
+
+
+.headline {
+    padding: 5% 2%;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    font-family: 'Roboto', sans-serif;
+    font-style: bold 700;
+}
+
+img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.rona {
+    height: 350px;
+    width: 350px;
+}
+
+.headlinetext {
+    padding: 0 5%;
+    margin-left: 5%;
+}
+
+.container1 {
+    display: grid;
+    height: 100%;
+    padding: 10px;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 2fr)) ;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+    grid-template-areas: 
+    "box1 box1 box2"
+    "box3 box4 box5"
+}
+
+.business {
+    margin: 10px;
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+    
+}
+
+.container2 {
+    display: grid;
+    height: 100%;
+    padding: 10px;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 2fr)) ;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+    grid-template-areas: 
+    "box1 box1 box2"
+    "box3 box4 box5"
+}
+
+.box1 img {
+    max-width: 50%;
+    height: auto;
+}
+.box1 p {
+    
+    align-self: center;
+}
+
+.box1 {
+    padding: 2%;
+    background: whitesmoke;
+    grid-area: box1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+
+.box2 {
+    background: whitesmoke;
+    grid-area: box2;
+}
+
+.box3 {
+    background: whitesmoke;
+    grid-area: box3;
+}
+.box4 {
+    background: whitesmoke;
+    grid-area: box4;
+}
+.box5 {
+    background: whitesmoke;
+    grid-area: box5;
+}
+
+.form {
+    background-color: rgb(179, 177, 177);
+    border-bottom: 2px solid gray;
+    margin: 10px;
+    height: 100%;
+    padding: 5px;
+    background-size: auto;
+    background-repeat: repeat;
+    background-image: url(https://prd-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/styles/atom_page_medium/public/thumbnails/image/banner_mapsHD.png);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.form form {
+    margin: 5%;
+}
